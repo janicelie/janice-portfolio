@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+:root {
+  --poppins: "Poppins", sans-serif;
+  --soft-pink: rgb(245, 236, 255);
+  --choco: rgb(71, 54, 43);
+}
+
+.font-light {
+  font-weight: lighter;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: var(--poppins);
+  border-bottom: 4px solid var(--choco);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--soft-pink);
+  font-family: var(--poppins);
+  color: var(--choco);
+}
+
+nav ul {
+  font-size: 1.5em;
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--choco);
+}
+
+nav a:hover {
+  border-bottom: 3px solid var(--choco);
+}
+
+ul li {
+  margin-left: 2em;
+  list-style: none;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  min-height: 100vh;
+}
+
+img {
+  border-radius: 20px;
+  width: 500px;
+  height: 500px;
+}
+
+.sub-intro {
+  display: flex;
+  flex: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-text {
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.sub-intro-container {
+  margin-left: 70px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2em;
+  width: 100%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 2em;
+  text-align: center;
+}
+
+.margin-btm {
+  margin-bottom: 250px;
+}
+
+.education {
+  text-align: left;
+}
+
+.education li {
+  margin-bottom: 50px;
+}
+
+.about {
+  background-color: var(--choco);
+  color: var(--soft-pink);
+  padding: 50px;
+}
+
+#about {
+  position: relative;
+  padding-top: 200px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.ctc {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: var(--choco);
+  color: var(--soft-pink);
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+}
