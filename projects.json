@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "name": "KryptMe",
+      "desc": "File encryption software with 2FA.",
+      "img": "img/janice-photo.jpg"
+    },
+    {
+      "name": "ToDos",
+      "desc": "Simple To-Dos List that allows you to track your activities for a day!",
+      "img": "img/janice-photo.jpg"
+    },
+    {
+      "name": "Movie App",
+      "desc": "Movie lovers? Use this app to search for the latest and most popular movie!",
+      "img": "img/janice-photo.jpg"
+    },
+    {
+      "name": "Food Recipe App",
+      "desc": "Love cooking but don't know the recipe? Come find your favourite meals and cook for your loved one!",
+      "img": "img/janice-photo.jpg"
+    }
+  ]
+}
