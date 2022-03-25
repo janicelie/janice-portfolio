@@ -84,12 +84,26 @@ menus.forEach((menu) => {
     this.classList.add("active");
     let sectionName = menu.querySelector("a").textContent;
     let section = document.getElementById(sectionName);
-    display(section);
+    display(section, sectionName);
   });
 });
 
-function display(section) {
-  section.style.display = "block";
+function display(section, sectionName) {
+  const footer = document.querySelector("footer");
+  if (sectionName == "Home") {
+    footer.style.position = "relative";
+    document.getElementById("Home").style.display = "flex";
+    document.getElementById("About").style.display = "flex";
+    document.getElementById("Projects").style.display = "flex";
+    document.getElementById("Contact").style.display = "flex";
+  } else {
+    section.style.display = "flex";
+    if (sectionName == "Contact" || sectionName == "About") {
+      footer.style.position = "absolute";
+    } else {
+      footer.style.position = "relative";
+    }
+  }
 }
 
 // if (section.style.display === "none") {

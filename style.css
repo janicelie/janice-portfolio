@@ -113,6 +113,7 @@ ul li {
   margin-left: auto;
   margin-right: auto;
   /* margin-bottom: 100px; */
+  padding-top: 150px;
 }
 
 .title {
@@ -133,14 +134,17 @@ ul li {
 }
 
 .about {
-  background-color: var(--choco);
-  color: var(--soft-pink);
-  padding: 100px;
-  height: 80vh;
+  background-color: var(--soft-pink);
+  color: var(--choco);
+  padding-left: 100px;
+  padding-right: 100px;
+  /* height: 70vh; */
 }
 
 #About {
-  align-items: center;
+  /* align-items: center; */
+  justify-content: center;
+  /* min-height: 100vh; */
 }
 
 .contact-list {
@@ -162,6 +166,10 @@ footer {
   font-size: 2em;
   /* margin-top: 250px; */
   margin-top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: relative;
 }
 
 #toTop {
@@ -194,11 +202,7 @@ footer {
   margin-bottom: 0;
 }
 
-#Projects {
-  padding-top: 100px;
-}
 #projects-container {
-  margin-top: 60px;
   /* display: grid;
   grid-template-columns: auto auto auto;
   gap: 30px; */
@@ -250,6 +254,12 @@ footer {
   transition: 0.4s;
 }
 
-#Contact {
-  min-height: 100vh;
+#contact-home a:hover {
+  color: violet;
+  transition: 0.4s;
+}
+
+#contact-home a {
+  margin-right: 20px;
+  align-items: center;
 }
