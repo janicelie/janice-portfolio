@@ -7,26 +7,26 @@ var projectData = [
   {
     name: "KryptMe",
     desc: "File encryption software with 2FA.",
-    img: "img/janice-photo.jpg",
+    img: "kryptme.jpg",
     link: "https://google.com",
   },
   {
     name: "ToDos",
     desc: "Simple To-Dos List that allows you to track your activities for a day!",
-    img: "img/janice-photo.jpg",
-    link: "https://google.com",
+    img: "todos.jpg",
+    link: "https://janicelie.github.io/todo-app/",
   },
   {
     name: "Movie App",
     desc: "Movie lovers? Use this app to search for the latest and most popular movie!",
-    img: "img/janice-photo.jpg",
-    link: "https://google.com",
+    img: "movie-app.jpg",
+    link: "https://janicelie.github.io/movie-app/",
   },
   {
     name: "Food Recipe App",
     desc: "Love cooking but don't know the recipe? Come find your favourite meals and cook for your loved one!",
-    img: "img/janice-photo.jpg",
-    link: "https://google.com",
+    img: "food-recipe-app.jpg",
+    link: "https://janicelie.github.io/food-recipe-app/",
   },
 ];
 
@@ -38,7 +38,7 @@ function showProject(projectData) {
     const projectEl = document.createElement("div");
     projectEl.classList.add("project");
     projectEl.innerHTML = `
-      <img src="${img}"/>
+      <img src="img/projects/${img}"/>
       <div class="project-body">
           <h4>${name}</h4>
           <p>${desc}</p>
