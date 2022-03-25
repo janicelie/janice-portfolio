@@ -31,7 +31,7 @@ nav {
   position: fixed;
   width: 100%;
   background-color: var(--soft-pink);
-  top: -100px;
+  /* top: -100px; */
   transition: top 0.3s;
   z-index: 99;
 }
@@ -57,7 +57,8 @@ a {
   color: var(--choco);
 }
 
-nav a:hover {
+.active,
+.menu:hover {
   border-bottom: 3px solid var(--choco);
 }
 
@@ -111,15 +112,16 @@ ul li {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  /* margin-bottom: 100px; */
 }
 
 .title {
-  font-size: 2em;
+  font-size: 1.75em;
   text-align: center;
 }
 
 .margin-btm {
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 #education {
@@ -137,11 +139,11 @@ ul li {
   height: 80vh;
 }
 
-#about {
+#About {
   align-items: center;
 }
 
-.contact {
+.contact-list {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -158,7 +160,8 @@ footer {
   padding: 20px;
   text-align: center;
   font-size: 2em;
-  margin-top: 250px;
+  /* margin-top: 250px; */
+  margin-top: auto;
 }
 
 #toTop {
@@ -191,7 +194,7 @@ footer {
   margin-bottom: 0;
 }
 
-#projects {
+#Projects {
   padding-top: 100px;
 }
 #projects-container {
@@ -245,4 +248,8 @@ footer {
   background-color: violet;
   color: var(--choco);
   transition: 0.4s;
+}
+
+#Contact {
+  min-height: 100vh;
 }

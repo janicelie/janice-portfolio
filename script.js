@@ -49,19 +49,19 @@ function showProject(projectData) {
   });
 }
 
-window.onscroll = function () {
-  scrollFunction();
-};
+// window.onscroll = function () {
+//   scrollFunction();
+// };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    toTopBtn.style.display = "block";
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    toTopBtn.style.display = "none";
-    document.getElementById("navbar").style.top = "-100px";
-  }
-}
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     toTopBtn.style.display = "block";
+//     document.getElementById("navbar").style.top = "0";
+//   } else {
+//     toTopBtn.style.display = "none";
+//     document.getElementById("navbar").style.top = "-100px";
+//   }
+// }
 
 toTopBtn.addEventListener("click", () => {
   // For Safari
@@ -70,3 +70,30 @@ toTopBtn.addEventListener("click", () => {
   // For Chrome, Firefox, IE and Opera
   document.documentElement.scrollTop = 0;
 });
+
+let menus = document.querySelectorAll(".menu");
+
+menus.forEach((menu) => {
+  menu.addEventListener("click", function () {
+    menus.forEach((menuEl) => {
+      menuEl.classList.remove("active");
+      let hideThisElName = menuEl.querySelector("a").textContent;
+      let hideThisEl = document.getElementById(hideThisElName);
+      hideThisEl.style.display = "none";
+    });
+    this.classList.add("active");
+    let sectionName = menu.querySelector("a").textContent;
+    let section = document.getElementById(sectionName);
+    display(section);
+  });
+});
+
+function display(section) {
+  section.style.display = "block";
+}
+
+// if (section.style.display === "none") {
+//   section.style.display = "block";
+// } else {
+//   section.style.display = "none";
+// }
