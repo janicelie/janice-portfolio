@@ -1,8 +1,15 @@
+// CONSTANT
 const toTopBtn = document.getElementById("toTop");
 const navbar = document.getElementById("navbar");
 const about = document.getElementById("about");
 const projectSection = document.getElementById("projects-container");
 
+$(document).ready(function () {
+  showProject(projectData);
+  firstDisplay();
+});
+
+// PROJECT DATA
 var projectData = [
   {
     name: "KryptMe",
@@ -28,10 +35,27 @@ var projectData = [
     img: "food-recipe-app.jpg",
     link: "https://janicelie.github.io/food-recipe-app/",
   },
+  {
+    name: "Password Generator App",
+    desc: "The most convenient password generator app of the year!",
+    img: "password-generator-app.jpg",
+    link: "https://janicelie.github.io/food-recipe-app/",
+  },
+  {
+    name: "Note",
+    desc: "Write down all your notes here!",
+    img: "note-app.jpg",
+    link: "https://janicelie.github.io/food-recipe-app/",
+  },
+  {
+    name: "Drawing App",
+    desc: "Allows you to draw everything you can imagine:)",
+    img: "drawing-app.jpg",
+    link: "https://janicelie.github.io/food-recipe-app/",
+  },
 ];
 
-showProject(projectData);
-
+// FUNCTION
 function showProject(projectData) {
   projectData.forEach((project) => {
     const { name, desc, img, link } = project;
@@ -71,19 +95,30 @@ toTopBtn.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
 });
 
-let menus = document.querySelectorAll(".menu");
+let menus = document.querySelectorAll(".opt");
+
+function firstDisplay() {
+  this.classList.add("active");
+  let project = document.getElementById("Projects");
+  let contact = document.getElementById("Contact");
+  project.style.display = "none";
+  contact.style.display = "none";
+}
 
 menus.forEach((menu) => {
   menu.addEventListener("click", function () {
+    // Removing active class
     menus.forEach((menuEl) => {
       menuEl.classList.remove("active");
-      let hideThisElName = menuEl.querySelector("a").textContent;
-      let hideThisEl = document.getElementById(hideThisElName);
+      let hideThisEl = document.getElementById(menuEl.textContent);
       hideThisEl.style.display = "none";
+      //hideThisEl.classList.remove("w3-animate-right");
     });
+
     this.classList.add("active");
-    let sectionName = menu.querySelector("a").textContent;
-    let section = document.getElementById(sectionName);
+    let section = document.getElementById(menu.textContent);
+    let sectionName = menu.textContent;
+    //section.classList.add("w3-animate-right");
     display(section, sectionName);
   });
 });
@@ -92,13 +127,13 @@ function display(section, sectionName) {
   const footer = document.querySelector("footer");
   if (sectionName == "Home") {
     footer.style.position = "relative";
-    document.getElementById("Home").style.display = "flex";
-    document.getElementById("About").style.display = "flex";
-    document.getElementById("Projects").style.display = "flex";
-    document.getElementById("Contact").style.display = "flex";
+    section.style.display = "flex";
+    // document.getElementById("About").style.display = "flex";
+    // document.getElementById("Projects").style.display = "flex";
+    // document.getElementById("Contact").style.display = "flex";
   } else {
     section.style.display = "flex";
-    if (sectionName == "Contact" || sectionName == "About") {
+    if (sectionName == "Contact") {
       footer.style.position = "absolute";
     } else {
       footer.style.position = "relative";
