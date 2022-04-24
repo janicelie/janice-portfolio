@@ -3,6 +3,8 @@ const toTopBtn = document.getElementById("toTop");
 const navbar = document.getElementById("navbar");
 const about = document.getElementById("about");
 const projectSection = document.getElementById("projects-container");
+const projectInitial = document.getElementById("Projects");
+const contactInitial = document.getElementById("Contact");
 
 $(document).ready(function () {
   showProject(projectData);
@@ -53,6 +55,12 @@ var projectData = [
     img: "drawing-app.jpg",
     link: "https://janicelie.github.io/food-recipe-app/",
   },
+  {
+    name: "Weather App",
+    desc: "Check your local weather and any other places in the world!",
+    img: "weather-app.jpg",
+    link: "https://janicelie.github.io/weather-app/",
+  },
 ];
 
 // FUNCTION
@@ -98,11 +106,9 @@ toTopBtn.addEventListener("click", () => {
 let menus = document.querySelectorAll(".opt");
 
 function firstDisplay() {
-  this.classList.add("active");
-  let project = document.getElementById("Projects");
-  let contact = document.getElementById("Contact");
-  project.style.display = "none";
-  contact.style.display = "none";
+  document.getElementById("Home").classList.add("active");
+  projectInitial.style.display = "none";
+  contactInitial.style.display = "none";
 }
 
 menus.forEach((menu) => {
@@ -120,6 +126,12 @@ menus.forEach((menu) => {
     let sectionName = menu.textContent;
     //section.classList.add("w3-animate-right");
     display(section, sectionName);
+
+    // For Safari
+    document.body.scrollTop = 0;
+
+    // For Chrome, Firefox, IE and Opera
+    document.documentElement.scrollTop = 0;
   });
 });
 
